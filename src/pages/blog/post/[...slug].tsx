@@ -2,11 +2,11 @@ import { useRouter } from "next/router";
 
 export default function BlogPage() {
     const router = useRouter();
-    console.log(router.query.slug);
+    const segment = router.query.slug as string[];
 
     return (
         <div>
-            <h2>Post!2: {router.query.slug}</h2>
+            <h2>Pos: {segment?.join('/')} </h2>
         </div>
     )
 }
